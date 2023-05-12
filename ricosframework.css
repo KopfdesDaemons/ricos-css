@@ -118,14 +118,16 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("fonts/quicksand-v29-latin-regular.woff2") format("woff2"), url("fonts/quicksand-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""), url("fonts/quicksand-v29-latin-regular.woff2") format("woff2"), url("fonts/quicksand-v29-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
   font-display: swap;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("fonts/roboto-v30-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("fonts/roboto-v30-latin-regular.woff") format("woff");
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /*#region basics*/
 html,
@@ -166,7 +168,10 @@ h1 {
   text-align: center;
 }
 
-h2, h3, .darkmode h2, .darkmode h3 {
+h2,
+h3,
+.darkmode h2,
+.darkmode h3 {
   color: var(--primary-variant-darker);
 }
 
@@ -333,7 +338,9 @@ input::-webkit-inner-spin-button {
   pointer-events: none;
 }
 
-.inputfeld .invalid:invalid, input.ng-dirty.ng-invalid, .ng-submitted input.ng-invalid {
+.inputfeld .invalid:invalid,
+input.ng-dirty.ng-invalid,
+.ng-submitted input.ng-invalid {
   border-bottom: 2px solid red;
 }
 
@@ -489,6 +496,28 @@ section:first-of-type .sectiondiv {
 }
 .imageZoomBox img {
   transition: all 0.3s linear;
+}
+
+/*#endregion*/
+/*#region scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-variant-much-brighter);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 /*#endregion*//*# sourceMappingURL=ricosframework.css.map */
