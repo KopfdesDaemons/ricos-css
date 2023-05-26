@@ -512,6 +512,7 @@ section:first-of-type .sectiondiv {
 /*#region images*/
 .imageZoomBox {
   overflow: hidden;
+  display: flex;
 
   img:hover {
     transform: scale(1.1);
