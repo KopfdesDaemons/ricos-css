@@ -146,6 +146,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   background-color: var(--body);
+  scrollbar-color: var(--primary-variant-much-brighter) transparent;
 }
 
 body {
@@ -508,28 +509,6 @@ section:first-of-type .sectiondiv {
 }
 .imageZoomBox img {
   transition: all 0.3s linear;
-}
-
-/*#endregion*/
-/*#region scrollbar*/
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--primary-variant-much-brighter);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
 }
 
 /*#endregion*//*# sourceMappingURL=ricosframework.css.map */
