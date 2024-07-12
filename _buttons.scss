@@ -1,5 +1,7 @@
 /*#region button*/
-button {
+button,
+.btn,
+.darkmode .btn {
     all: unset;
     color: rgb(10, 10, 10);
     background-color: var(--primary-color);
@@ -11,12 +13,17 @@ button {
     font-size: 0.875rem;
     height: 36px;
     user-select: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: var(--primary-variant-much-brighter);
+        cursor: pointer;
+    }
 }
 
-button:hover {
-    background-color: var(--primary-variant-much-brighter);
-    cursor: pointer;
-}
 
 button:disabled {
     background-color: var(--primary-variant-much-brighter);
