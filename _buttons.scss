@@ -59,6 +59,7 @@ button,
 }
 
 .btntext {
+    @include button;
     background-color: transparent;
     color: var(--primary-variant-darker);
     border: 0;
@@ -67,6 +68,10 @@ button,
 
     &:hover {
         background-color: var(--primary-variant-much-brighter);
+    }
+
+    &:visited {
+        color: var(--primary-variant-darker);
     }
 }
 

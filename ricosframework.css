@@ -365,6 +365,23 @@ button span,
 }
 
 .btntext {
+  all: unset;
+  color: rgb(10, 10, 10);
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  margin: 0.2rem;
+  padding: 0 15px;
+  border: none;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  height: 36px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   color: var(--primary-variant-darker);
   border: 0;
@@ -373,6 +390,21 @@ button span,
 }
 .btntext:hover {
   background-color: var(--primary-variant-much-brighter);
+  cursor: pointer;
+}
+.btntext:disabled {
+  background-color: var(--primary-variant-much-brighter);
+  cursor: not-allowed;
+}
+.btntext div,
+.btntext span {
+  font-family: "Roboto", sans-serif;
+}
+.btntext:hover {
+  background-color: var(--primary-variant-much-brighter);
+}
+.btntext:visited {
+  color: var(--primary-variant-darker);
 }
 
 .btnicon {
