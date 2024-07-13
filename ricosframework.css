@@ -276,7 +276,6 @@ select:focus-visible {
 }
 
 /*#endregion*/
-/*#region button*/
 button,
 .btn,
 .darkmode .btn {
@@ -304,58 +303,78 @@ button:hover,
   background-color: var(--primary-variant-much-brighter);
   cursor: pointer;
 }
-
-button:disabled {
+button:disabled,
+.btn:disabled,
+.darkmode .btn:disabled {
   background-color: var(--primary-variant-much-brighter);
   cursor: not-allowed;
 }
-
-button,
 button div,
-button span {
+button span,
+.btn div,
+.btn span,
+.darkmode .btn div,
+.darkmode .btn span {
   font-family: "Roboto", sans-serif;
 }
 
-/*#endregion*/
-/*#region buttonoutlined*/
 .btnoutlined {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 0.1rem solid var(--primary-variant-darker);
+  all: unset;
+  color: rgb(10, 10, 10);
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  margin: 0.2rem;
+  padding: 0 15px;
+  border: none;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  height: 36px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--primary-color);
+  outline: 0.1rem solid var(--primary-variant-darker);
 }
-
+.btnoutlined:hover {
+  background-color: var(--primary-variant-much-brighter);
+  cursor: pointer;
+}
+.btnoutlined:disabled {
+  background-color: var(--primary-variant-much-brighter);
+  cursor: not-allowed;
+}
+.btnoutlined div,
+.btnoutlined span {
+  font-family: "Roboto", sans-serif;
+}
+.btnoutlined:visited {
+  color: var(--primary-color);
+}
 .btnoutlined:hover {
   background-color: var(--primary-variant-much-brighter);
 }
-
 .btnoutlined:disabled {
   background-color: var(--hintergrund-inputfeld);
   border-color: #bbbbbb;
   color: #bbbbbb;
 }
 
-/*#endregion*/
-/*#region buttontext*/
 .btntext {
   background-color: transparent;
   color: var(--primary-variant-darker);
   border: 0;
   box-shadow: none;
   padding: 0 8px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
-
 .btntext:hover {
   background-color: var(--primary-variant-much-brighter);
 }
 
-/*#endregion*/
-/*#region buttonicon*/
 .btnicon {
   display: inline-flex;
   align-items: center;
@@ -367,12 +386,10 @@ button span {
   background-color: var(--hintergrund-variant);
   color: var(--schrift);
 }
-
 .btnicon:hover {
   background-color: var(--primary-variant-much-brighter);
 }
 
-/*#endregion*/
 /*#region basics*/
 html,
 body {

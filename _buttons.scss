@@ -1,7 +1,4 @@
-/*#region button*/
-button,
-.btn,
-.darkmode .btn {
+@mixin button {
     all: unset;
     color: rgb(10, 10, 10);
     background-color: var(--primary-color);
@@ -22,56 +19,57 @@ button,
         background-color: var(--primary-variant-much-brighter);
         cursor: pointer;
     }
-}
 
+    &:disabled {
+        background-color: var(--primary-variant-much-brighter);
+        cursor: not-allowed;
+    }
 
-button:disabled {
-    background-color: var(--primary-variant-much-brighter);
-    cursor: not-allowed;
+    div,
+    span {
+        font-family: "Roboto", sans-serif;
+    }
 }
 
 button,
-button div,
-button span {
-    font-family: "Roboto", sans-serif;
+.btn,
+.darkmode .btn {
+    @include button;
 }
 
-/*#endregion*/
-/*#region buttonoutlined*/
 .btnoutlined {
+    @include button;
     background-color: transparent;
     color: var(--primary-color);
-    border: 0.1rem solid var(--primary-variant-darker);
-    user-select: none;
+    outline: 0.1rem solid var(--primary-variant-darker);
+
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        background-color: var(--primary-variant-much-brighter);
+    }
+
+    &:disabled {
+        background-color: var(--hintergrund-inputfeld);
+        border-color: #bbbbbb;
+        color: #bbbbbb;
+    }
 }
 
-.btnoutlined:hover {
-    background-color: var(--primary-variant-much-brighter);
-}
-
-.btnoutlined:disabled {
-    background-color: var(--hintergrund-inputfeld);
-    border-color: #bbbbbb;
-    color: #bbbbbb;
-}
-
-/*#endregion*/
-/*#region buttontext*/
 .btntext {
     background-color: transparent;
     color: var(--primary-variant-darker);
     border: 0;
     box-shadow: none;
     padding: 0 8px;
-    user-select: none;
+
+    &:hover {
+        background-color: var(--primary-variant-much-brighter);
+    }
 }
 
-.btntext:hover {
-    background-color: var(--primary-variant-much-brighter);
-}
-
-/*#endregion*/
-/*#region buttonicon*/
 .btnicon {
     display: inline-flex;
     align-items: center;
@@ -82,10 +80,8 @@ button span {
     border-radius: 50%;
     background-color: var(--hintergrund-variant);
     color: var(--schrift);
-}
 
-.btnicon:hover {
-    background-color: var(--primary-variant-much-brighter);
+    &:hover {
+        background-color: var(--primary-variant-much-brighter);
+    }
 }
-
-/*#endregion*/
