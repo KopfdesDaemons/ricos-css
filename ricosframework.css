@@ -285,11 +285,10 @@ button,
   background-color: var(--primary-color);
   border-radius: 8px;
   margin: 0.2rem;
-  padding: 0 15px;
+  padding: 0 0.8em;
   border: none;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  font-size: 0.875rem;
-  height: 36px;
+  height: 2.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -319,17 +318,17 @@ button span,
   font-family: "Roboto", sans-serif;
 }
 
+.darkmode .btnoutlined,
 .btnoutlined {
   all: unset;
   color: rgb(10, 10, 10);
   background-color: var(--primary-color);
   border-radius: 8px;
   margin: 0.2rem;
-  padding: 0 15px;
+  padding: 0 0.8em;
   border: none;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  font-size: 0.875rem;
-  height: 36px;
+  height: 2.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -341,41 +340,48 @@ button span,
   color: var(--primary-color);
   outline: 0.1rem solid var(--primary-variant-darker);
 }
+.darkmode .btnoutlined:hover,
 .btnoutlined:hover {
   background-color: var(--primary-variant-much-brighter);
   cursor: pointer;
 }
+.darkmode .btnoutlined:disabled,
 .btnoutlined:disabled {
   background-color: var(--primary-variant-much-brighter);
   cursor: not-allowed;
 }
+.darkmode .btnoutlined div,
+.darkmode .btnoutlined span,
 .btnoutlined div,
 .btnoutlined span {
   font-family: "Roboto", sans-serif;
 }
+.darkmode .btnoutlined:visited,
 .btnoutlined:visited {
   color: var(--primary-color);
 }
+.darkmode .btnoutlined:hover,
 .btnoutlined:hover {
   background-color: var(--primary-variant-much-brighter);
 }
+.darkmode .btnoutlined:disabled,
 .btnoutlined:disabled {
   background-color: var(--hintergrund-inputfeld);
   border-color: #bbbbbb;
   color: #bbbbbb;
 }
 
+.darkmode .btntext,
 .btntext {
   all: unset;
   color: rgb(10, 10, 10);
   background-color: var(--primary-color);
   border-radius: 8px;
   margin: 0.2rem;
-  padding: 0 15px;
+  padding: 0 0.8em;
   border: none;
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-  font-size: 0.875rem;
-  height: 36px;
+  height: 2.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -387,23 +393,28 @@ button span,
   color: var(--primary-variant-darker);
   border: 0;
   box-shadow: none;
-  padding: 0 8px;
 }
+.darkmode .btntext:hover,
 .btntext:hover {
   background-color: var(--primary-variant-much-brighter);
   cursor: pointer;
 }
+.darkmode .btntext:disabled,
 .btntext:disabled {
   background-color: var(--primary-variant-much-brighter);
   cursor: not-allowed;
 }
+.darkmode .btntext div,
+.darkmode .btntext span,
 .btntext div,
 .btntext span {
   font-family: "Roboto", sans-serif;
 }
+.darkmode .btntext:hover,
 .btntext:hover {
   background-color: var(--primary-variant-much-brighter);
 }
+.darkmode .btntext:visited,
 .btntext:visited {
   color: var(--primary-variant-darker);
 }
@@ -423,6 +434,14 @@ button span,
   background-color: var(--primary-variant-much-brighter);
 }
 
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /*#region basics*/
 html,
 body {
@@ -432,6 +451,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--body);
   scrollbar-color: var(--primary-variant-much-brighter) transparent;
+  text-wrap: pretty;
 }
 
 body {
@@ -539,15 +559,21 @@ section:first-of-type .sectiondiv {
 }
 /*#endregion*/
 /*#region images*/
+img {
+  max-width: 100%;
+}
+
 .imageZoomBox {
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 .imageZoomBox img:hover {
   transform: scale(1.1);
 }
 .imageZoomBox img {
   transition: all 0.3s linear;
+  animation: grow 500ms;
 }
 
 /*#endregion*//*# sourceMappingURL=ricosframework.css.map */

@@ -4,11 +4,10 @@
     background-color: var(--primary-color);
     border-radius: 8px;
     margin: 0.2rem;
-    padding: 0 15px;
+    padding: 0 0.8em;
     border: none;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-    font-size: 0.875rem;
-    height: 36px;
+    height: 2.5em;
     user-select: none;
     cursor: pointer;
     display: inline-flex;
@@ -37,6 +36,7 @@ button,
     @include button;
 }
 
+.darkmode .btnoutlined,
 .btnoutlined {
     @include button;
     background-color: transparent;
@@ -58,13 +58,13 @@ button,
     }
 }
 
+.darkmode .btntext,
 .btntext {
     @include button;
     background-color: transparent;
     color: var(--primary-variant-darker);
     border: 0;
     box-shadow: none;
-    padding: 0 8px;
 
     &:hover {
         background-color: var(--primary-variant-much-brighter);

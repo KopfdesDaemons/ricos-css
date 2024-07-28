@@ -2,6 +2,7 @@
 @use "fonts";
 @use 'inputs';
 @use 'buttons';
+@use 'animations';
 
 /*#region basics*/
 html,
@@ -12,6 +13,7 @@ body {
   scroll-behavior: smooth;
   background-color: var(--body);
   scrollbar-color: var(--primary-variant-much-brighter) transparent;
+  text-wrap: pretty;
 }
 
 body {
@@ -121,9 +123,14 @@ section:first-of-type .sectiondiv {
 
 /*#endregion*/
 /*#region images*/
+img {
+  max-width: 100%;
+}
+
 .imageZoomBox {
   overflow: hidden;
   display: flex;
+  justify-content: center;
 
   img:hover {
     transform: scale(1.1);
@@ -131,6 +138,7 @@ section:first-of-type .sectiondiv {
 
   img {
     transition: all 0.3s linear;
+    animation: grow 500ms;
   }
 }
 
