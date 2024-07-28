@@ -139,6 +139,7 @@ img {
   img {
     transition: all 0.3s linear;
     animation: grow 500ms;
+    object-fit: contain;
   }
 }
 

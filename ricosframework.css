@@ -576,6 +576,8 @@ img {
 .imageZoomBox img {
   transition: all 0.3s linear;
   animation: grow 500ms;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /*#endregion*//*# sourceMappingURL=ricosframework.css.map */
