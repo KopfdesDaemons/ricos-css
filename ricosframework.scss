@@ -56,6 +56,9 @@ table {
   font-size: clamp(0.8rem, 4vw, 1rem);
   border-radius: 10px;
   background-color: var(--hintergrund);
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 table thead tr {
@@ -89,7 +92,7 @@ section {
 .sectiondiv {
   box-sizing: border-box;
   width: 100%;
-  max-width: 80em;
+  max-width: 70em;
   padding: 2em;
   display: flex;
   flex-direction: column;
