@@ -56,9 +56,6 @@ table {
   font-size: clamp(0.8rem, 4vw, 1rem);
   border-radius: 10px;
   background-color: var(--hintergrund);
-  display: block;
-  overflow-x: auto;
-  max-width: 100%;
 }
 
 table thead tr {
@@ -147,3 +144,8 @@ img {
 }
 
 /*#endregion*/
+
+.scrollContainer {
+  overflow-x: auto;
+  max-width: 100%;
+}
