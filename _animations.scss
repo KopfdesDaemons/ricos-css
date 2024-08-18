@@ -7,3 +7,15 @@
         transform: scale(1);
     }
 }
+
+@keyframes slideInFromTop {
+    from {
+        position: relative;
+        top: -40em;
+    }
+
+    to {
+        position: relative;
+        top: 0em;
+    }
+}
