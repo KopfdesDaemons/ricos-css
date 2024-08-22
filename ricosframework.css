@@ -434,6 +434,7 @@ button span,
 }
 .btnicon:hover {
   background-color: var(--primary-variant-much-brighter);
+  cursor: pointer;
 }
 
 @keyframes grow {
