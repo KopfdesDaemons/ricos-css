@@ -39,9 +39,12 @@ button,
 .darkmode .btnoutlined,
 .btnoutlined {
     @include button;
-    background-color: transparent;
-    color: var(--primary-color);
-    outline: 0.1rem solid var(--primary-variant-darker);
+
+    & {
+        background-color: transparent;
+        color: var(--primary-color);
+        outline: 0.1rem solid var(--primary-variant-darker);
+    }
 
     &:visited {
         color: var(--primary-color);
@@ -61,10 +64,13 @@ button,
 .darkmode .btntext,
 .btntext {
     @include button;
-    background-color: transparent;
-    color: var(--primary-variant-darker);
-    border: 0;
-    box-shadow: none;
+
+    & {
+        background-color: transparent;
+        color: var(--primary-variant-darker);
+        border: 0;
+        box-shadow: none;
+    }
 
     &:hover {
         background-color: var(--primary-variant-much-brighter);

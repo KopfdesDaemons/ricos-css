@@ -142,3 +142,12 @@ select:focus-visible {
 }
 
 /*#endregion*/
+/*#region checkbox*/
+input[type="checkbox"] {
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+    accent-color: var(--primary-color)
+}
+
+/*#endregion*/
