@@ -20,6 +20,10 @@
     width: 100%;
     border: none;
     box-sizing: border-box;
+
+    &:disabled {
+        filter: brightness(0.5);
+    }
 }
 
 input:-webkit-autofill {
@@ -148,6 +152,15 @@ input[type="checkbox"] {
     height: 1.5em;
     width: 1.5em;
     accent-color: var(--primary-color)
+}
+
+/*#endregion*/
+
+/*#region textarea*/
+textarea {
+    background-color: var(--hintergrund-inputfeld);
+    color: var(--schrift);
+    padding: 0.5em;
 }
 
 /*#endregion*/
