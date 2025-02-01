@@ -54,26 +54,36 @@ table {
   border-collapse: collapse;
   margin-top: 25px;
   font-size: clamp(0.8rem, 4vw, 1rem);
-  border-radius: 10px;
-  background-color: var(--hintergrund);
-}
-
-table thead tr {
-  background-color: transparent;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 12px 15px;
-}
-
-th {
-  color: var(--primary-variant-darker);
-}
-
-tbody tr:nth-of-type(even) {
+  border-radius: 0;
   background-color: var(--hintergrund-variant-darker);
+
+  thead tr {
+    text-align: left;
+    background-color: var(--hintergrund-variant-darker);
+  }
+
+  th {
+    color: var(--primary-variant-darker);
+  }
+
+  td,
+  th {
+    padding: 1em
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid gray;
+    }
+
+    tr:hover {
+      background-color: var(--hintergrund-variant);
+    }
+
+    .admin {
+      color: red;
+    }
+  }
 }
 
 /*#endregion*/
