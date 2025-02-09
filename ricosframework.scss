@@ -117,10 +117,6 @@ section {
   border: 1px solid var(--primary-color);
 }
 
-section:first-of-type .sectiondiv {
-  margin-top: 6vh;
-}
-
 @media only screen and (max-width: 700px) {
   .sectiondiv {
     padding: 0.8em;
