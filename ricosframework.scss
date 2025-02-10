@@ -55,11 +55,10 @@ table {
   margin-top: 25px;
   font-size: clamp(0.8rem, 4vw, 1rem);
   border-radius: 0;
-  background-color: var(--hintergrund-variant-darker);
 
   thead tr {
     text-align: left;
-    background-color: var(--hintergrund-variant-darker);
+    background-color: var(--hintergrund-variant);
   }
 
   th {
