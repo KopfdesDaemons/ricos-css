@@ -1,99 +1,98 @@
 @mixin button {
-    all: unset;
-    color: rgb(10, 10, 10);
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    margin: 0.2rem;
-    padding: 0 0.8em;
-    border: none;
-    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
-    height: 2.5em;
-    user-select: none;
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  margin: 0.2rem;
+  padding: 0 0.8em;
+  border: 1px solid transparent;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  height: 2.5em;
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--primary-variant-much-brighter);
     cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  }
 
-    &:hover {
-        background-color: var(--primary-variant-much-brighter);
-        cursor: pointer;
-    }
+  &:disabled {
+    background-color: var(--primary-variant-much-brighter);
+    cursor: not-allowed;
+  }
 
-    &:disabled {
-        background-color: var(--primary-variant-much-brighter);
-        cursor: not-allowed;
-    }
-
-    div,
-    span {
-        font-family: "Roboto", sans-serif;
-    }
+  div,
+  span {
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 button,
 .btn,
 .darkmode .btn {
-    @include button;
+  @include button;
 }
 
 .darkmode .btnoutlined,
 .btnoutlined {
-    @include button;
+  @include button;
 
-    & {
-        background-color: transparent;
-        color: var(--primary-color);
-        outline: 0.1rem solid var(--primary-variant-darker);
-    }
+  & {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-variant-darker);
+  }
 
-    &:visited {
-        color: var(--primary-color);
-    }
+  &:visited {
+    color: var(--primary-color);
+  }
 
-    &:hover {
-        background-color: var(--primary-variant-much-brighter);
-    }
+  &:hover {
+    background-color: var(--primary-variant-much-brighter);
+  }
 
-    &:disabled {
-        background-color: var(--hintergrund-inputfeld);
-        border-color: #bbbbbb;
-        color: #bbbbbb;
-    }
+  &:disabled {
+    background-color: var(--hintergrund-inputfeld);
+    border-color: #bbbbbb;
+    color: #bbbbbb;
+  }
 }
 
 .darkmode .btntext,
 .btntext {
-    @include button;
+  @include button;
 
-    & {
-        background-color: transparent;
-        color: var(--primary-variant-darker);
-        border: 0;
-        box-shadow: none;
-    }
+  & {
+    background-color: transparent;
+    color: var(--primary-variant-darker);
+    box-shadow: none;
+  }
 
-    &:hover {
-        background-color: var(--primary-variant-much-brighter);
-    }
+  &:hover {
+    background-color: var(--primary-variant-much-brighter);
+  }
 
-    &:visited {
-        color: var(--primary-variant-darker);
-    }
+  &:visited {
+    color: var(--primary-variant-darker);
+  }
 }
 
 .btnicon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background-color: var(--hintergrund-variant);
-    color: var(--schrift);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--hintergrund-variant);
+  color: var(--schrift);
 
-    &:hover {
-        background-color: var(--primary-variant-much-brighter);
-        cursor: pointer;
-    }
+  &:hover {
+    background-color: var(--primary-variant-much-brighter);
+    cursor: pointer;
+  }
 }
