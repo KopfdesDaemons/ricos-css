@@ -1,33 +1,33 @@
 /*#region Inputfeld*/
 .inputfeld {
-    position: relative;
-    display: inline-flex;
-    font-size: 1rem;
-    height: 3rem;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin: 0.4rem 0.1rem;
-    background-color: inherit;
-    box-sizing: border-box;
-    overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 3rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin: 0.4rem 0.1rem;
+  background-color: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .inputfeld input {
-    font-weight: 500;
-    font-size: 1em;
-    color: var(--schrift);
-    padding: 1em 0.8em 0.5em;
-    outline: none;
-    width: 100%;
-    border: none;
-    box-sizing: border-box;
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--schrift);
+  padding: 1em 0.8em 0.5em;
+  outline: none;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
 
-    &:disabled {
-        filter: brightness(0.5);
-    }
+  &:disabled {
+    filter: brightness(0.5);
+  }
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: var(--schrift);
+  -webkit-text-fill-color: var(--schrift);
 }
 
 .inputfeld input,
@@ -35,132 +35,145 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    box-shadow: inset 0 0 0 1px var(--hintergrund-inputfeld), inset 0 0 0 100px var(--hintergrund-inputfeld);
+  box-shadow:
+    inset 0 0 0 1px var(--hintergrund-inputfeld),
+    inset 0 0 0 100px var(--hintergrund-inputfeld);
 }
 
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .inputfeld .placeholder {
-    position: absolute;
-    margin: 0 0.5em;
-    padding: 0 0.5em;
-    color: #6c757d;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
-    transition: all 0.2s;
-    transform-origin: 0% 0%;
-    height: 100%;
-    user-select: none;
-    pointer-events: none;
+  position: absolute;
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 
 .inputfeld .invalid:invalid,
 input.ng-dirty.ng-invalid,
 .ng-submitted input.ng-invalid {
-    border-bottom: 2px solid red;
+  border-bottom: 2px solid red;
 }
 
-.inputfeld input:not(:placeholder-shown)+.placeholder,
-.inputfeld input:focus+.placeholder,
-input:-webkit-autofill+.placeholder {
-    transform: scale(0.8) translateY(-0.1em);
-    height: auto;
-    color: var(--primary-color);
+.inputfeld input:not(:placeholder-shown) + .placeholder,
+.inputfeld input:focus + .placeholder,
+input:-webkit-autofill + .placeholder {
+  transform: scale(0.8) translateY(-0.1em);
+  height: auto;
+  color: var(--primary-color);
 }
 
 .inputfeld input:focus {
-    border-bottom: 2px solid var(--primary-variant-much-brighter);
+  border-bottom: 2px solid var(--primary-variant-much-brighter);
 }
 
-.inputfeld input:focus+.placeholder {
-    color: var(--primary-color);
+.inputfeld input:focus + .placeholder {
+  color: var(--primary-color);
 }
 
 /*#endregion*/
 /*#region Radiobutton*/
 .radiobuttontogglediv {
-    border: 1px solid #d9d9d9;
-    display: flex;
-    border-radius: 4px;
-    overflow: hidden;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
 
-    label {
-        padding: 0.6rem 0.8rem;
-        cursor: pointer;
-        user-select: none;
+  label {
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    user-select: none;
+  }
 
-    }
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
 
-    input {
-        display: none;
-    }
+  input:checked + label {
+    background-color: var(--primary-variant-much-brighter);
+  }
 
-    input:checked+label {
-        background-color: var(--primary-variant-much-brighter);
-    }
+  &:has(input:focus-visible) {
+    outline: 2px solid;
+  }
 }
 
 .radiochip {
-    label {
-        padding: 0.5rem;
-        width: 100%;
-        background-color: var(--hintergrund-inputfeld);
-        border-radius: 6px;
-        cursor: pointer;
+  label {
+    padding: 0.5rem;
+    width: 100%;
+    background-color: var(--hintergrund-inputfeld);
+    border-radius: 6px;
+    cursor: pointer;
 
-        &:hover {
-            background-color: var(--hintergrund-variant);
-        }
+    &:hover {
+      background-color: var(--hintergrund-variant);
     }
+  }
 
-    input {
-        display: none;
-    }
+  input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
 
-    input:checked+label {
-        background-color: var(--primary-variant-much-brighter);
-    }
+  input:checked + label {
+    background-color: var(--primary-variant-much-brighter);
+  }
 }
 
 /*#endregion*/
 /*#region select*/
 select {
-    font-size: 1rem;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin: 0.4em 0.1em;
-    border: 1px solid #d9d9d9;
-    color: #6c757d;
-    border-radius: 0.2rem;
-    padding: 0.75rem;
-    max-width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin: 0.4em 0.1em;
+  border: 1px solid #d9d9d9;
+  color: #6c757d;
+  border-radius: 0.2rem;
+  padding: 0.75rem;
+  max-width: 100%;
 }
 
 select:focus,
 select:focus-visible {
-    color: #284b63;
-    outline: 2px solid var(--primary-color);
+  color: #284b63;
+  outline: 2px solid var(--primary-color);
 }
 
 /*#endregion*/
 /*#region checkbox*/
 input[type="checkbox"] {
-    cursor: pointer;
-    height: 1.5em;
-    width: 1.5em;
-    accent-color: var(--primary-color)
+  cursor: pointer;
+  height: 1.5em;
+  width: 1.5em;
+  accent-color: var(--primary-color);
 }
 
 /*#endregion*/
 
 /*#region textarea*/
 textarea {
-    background-color: var(--hintergrund-inputfeld);
-    color: var(--schrift);
-    padding: 0.5em;
+  background-color: var(--hintergrund-inputfeld);
+  color: var(--schrift);
+  padding: 0.5em;
 }
 
 /*#endregion*/
