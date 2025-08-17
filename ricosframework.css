@@ -2,28 +2,49 @@
   --helligkeit: 50%;
   --hsl-color: 195, 74.9%;
   --primary-color: hsl(var(--hsl-color), var(--helligkeit));
-  --primary-variant-darker: hsl(var(--hsl-color), calc(var(--helligkeit) - 20%));
-  --primary-variant-brighter: hsl(var(--hsl-color), calc(var(--helligkeit) + 20%));
-  --primary-variant-much-brighter: hsl(var(--hsl-color), calc(var(--helligkeit) + 25%));
+  --primary-variant-darker: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) - 20%)
+  );
+  --primary-variant-brighter: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) + 20%)
+  );
+  --primary-variant-much-brighter: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) + 25%)
+  );
   --body: rgb(252, 252, 252);
   --hintergrund: rgb(230, 230, 230);
   --schrift: rgb(10, 10, 10);
   --hintergrund-inputfeld: hsl(var(--hsl-color), calc(var(--helligkeit) + 45%));
   --hintergrund-variant: hsl(var(--hsl-color), calc(var(--helligkeit) + 45%));
   --body-variant: hsl(var(--hsl-color), calc(var(--helligkeit) + 47%));
-  --hintergrund-variant-darker: hsl(var(--hsl-color), calc(var(--helligkeit) + 35%));
+  --hintergrund-variant-darker: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) + 35%)
+  );
 }
 
 .darkmode {
-  --primary-variant-darker: hsl(var(--hsl-color), calc(var(--helligkeit) + 25%));
-  --primary-variant-much-brighter: hsl(var(--hsl-color), calc(var(--helligkeit) - 20%));
+  --primary-variant-darker: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) + 25%)
+  );
+  --primary-variant-much-brighter: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) - 20%)
+  );
   --body: rgb(18, 19, 24);
   --hintergrund: rgb(27, 30, 38);
   --schrift: rgb(238, 238, 238);
   --hintergrund-inputfeld: hsl(var(--hsl-color), calc(var(--helligkeit) - 45%));
   --hintergrund-variant: hsl(var(--hsl-color), calc(var(--helligkeit) - 38%));
   --body-variant: hsl(var(--hsl-color), calc(var(--helligkeit) - 41%));
-  --hintergrund-variant-darker: hsl(var(--hsl-color), calc(var(--helligkeit) - 45%));
+  --hintergrund-variant-darker: hsl(
+    var(--hsl-color),
+    calc(var(--helligkeit) - 45%)
+  );
 }
 
 /* rubik-300 - latin */
@@ -33,7 +54,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 300;
-  src: url("fonts/rubik-v26-latin-300.woff2") format("woff2"), url("fonts/rubik-v26-latin-300.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-300.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-300.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-300italic - latin */
@@ -43,7 +66,9 @@
   font-family: "Rubik";
   font-style: italic;
   font-weight: 300;
-  src: url("fonts/rubik-v26-latin-300italic.woff2") format("woff2"), url("fonts/rubik-v26-latin-300italic.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-300italic.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-300italic.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-regular - latin */
@@ -53,7 +78,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/rubik-v26-latin-regular.woff2") format("woff2"), url("fonts/rubik-v26-latin-regular.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-regular.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-regular.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-italic - latin */
@@ -63,7 +90,9 @@
   font-family: "Rubik";
   font-style: italic;
   font-weight: 400;
-  src: url("fonts/rubik-v26-latin-italic.woff2") format("woff2"), url("fonts/rubik-v26-latin-italic.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-italic.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-italic.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-500 - latin */
@@ -73,7 +102,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  src: url("fonts/rubik-v26-latin-500.woff2") format("woff2"), url("fonts/rubik-v26-latin-500.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-500.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-500.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-600 - latin */
@@ -83,7 +114,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 600;
-  src: url("fonts/rubik-v26-latin-600.woff2") format("woff2"), url("fonts/rubik-v26-latin-600.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-600.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-600.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-700 - latin */
@@ -93,7 +126,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/rubik-v26-latin-700.woff2") format("woff2"), url("fonts/rubik-v26-latin-700.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-700.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-700.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-800 - latin */
@@ -103,7 +138,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
-  src: url("fonts/rubik-v26-latin-800.woff2") format("woff2"), url("fonts/rubik-v26-latin-800.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-800.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-800.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* rubik-900 - latin */
@@ -113,7 +150,9 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 900;
-  src: url("fonts/rubik-v26-latin-900.woff2") format("woff2"), url("fonts/rubik-v26-latin-900.woff") format("woff");
+  src:
+    url("fonts/rubik-v26-latin-900.woff2") format("woff2"),
+    url("fonts/rubik-v26-latin-900.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* comic Sans */
@@ -129,7 +168,10 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: local(""), url("fonts/quicksand-v29-latin-regular.woff2") format("woff2"), url("fonts/quicksand-v29-latin-regular.woff") format("woff");
+  src:
+    local(""),
+    url("fonts/quicksand-v29-latin-regular.woff2") format("woff2"),
+    url("fonts/quicksand-v29-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
@@ -137,7 +179,9 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("fonts/roboto-v30-latin-regular.woff") format("woff");
+  src:
+    url("fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+    url("fonts/roboto-v30-latin-regular.woff") format("woff");
   /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /*#region Inputfeld*/
@@ -173,7 +217,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  box-shadow: inset 0 0 0 1px var(--hintergrund-inputfeld), inset 0 0 0 100px var(--hintergrund-inputfeld);
+  box-shadow:
+    inset 0 0 0 1px var(--hintergrund-inputfeld),
+    inset 0 0 0 100px var(--hintergrund-inputfeld);
 }
 
 input::-webkit-inner-spin-button {
@@ -193,8 +239,8 @@ input::-webkit-inner-spin-button {
   transform-origin: 0% 0%;
   height: 100%;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   pointer-events: none;
 }
 
@@ -232,8 +278,8 @@ input:-webkit-autofill + .placeholder {
   padding: 0.6rem 0.8rem;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .radiobuttontogglediv input {
   display: none;
@@ -292,8 +338,8 @@ button,
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   height: 2.5em;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -332,8 +378,8 @@ button span,
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   height: 2.5em;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -385,8 +431,8 @@ button span,
   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
   height: 2.5em;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -588,11 +634,11 @@ img {
   transition: all 0.3s linear;
   animation: grow 500ms;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /*#endregion*/
 .scrollContainer {
   overflow-x: auto;
   max-width: 100%;
-}/*# sourceMappingURL=ricosframework.css.map */
+} /*# sourceMappingURL=ricosframework.css.map */

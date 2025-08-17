@@ -1,8 +1,8 @@
 @use "farben";
 @use "fonts";
-@use 'inputs';
-@use 'buttons';
-@use 'animations';
+@use "inputs";
+@use "buttons";
+@use "animations";
 
 /*#region basics*/
 html,
@@ -67,7 +67,7 @@ table {
 
   td,
   th {
-    padding: 1em
+    padding: 1em;
   }
 
   tbody {
