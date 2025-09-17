@@ -85,12 +85,13 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 0.3em;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
   background-color: var(--hintergrund-variant);
   color: var(--schrift);
+  box-sizing: border-box;
 
   &:hover {
     background-color: var(--primary-variant-much-brighter);
