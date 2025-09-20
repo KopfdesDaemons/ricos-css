@@ -1,0 +1,27 @@
+:root {
+  --brightness: 50%;
+  --hsl-color: 195, 74.9%;
+  --primary-color: hsl(var(--hsl-color), var(--brightness));
+  --primary-variant-darker: hsl(var(--hsl-color), calc(var(--brightness) - 20%));
+  --primary-variant-brighter: hsl(var(--hsl-color), calc(var(--brightness) + 20%));
+  --primary-variant-much-brighter: hsl(var(--hsl-color), calc(var(--brightness) + 25%));
+  --body: rgb(252, 252, 252);
+  --background: rgb(230, 230, 230);
+  --font-color: rgb(10, 10, 10);
+  --background-inputfeld: hsl(var(--hsl-color), calc(var(--brightness) + 45%));
+  --background-variant: hsl(var(--hsl-color), calc(var(--brightness) + 45%));
+  --body-variant: hsl(var(--hsl-color), calc(var(--brightness) + 47%));
+  --background-variant-darker: hsl(var(--hsl-color), calc(var(--brightness) + 35%));
+}
+
+.darkmode {
+  --primary-variant-darker: hsl(var(--hsl-color), calc(var(--brightness) + 25%));
+  --primary-variant-much-brighter: hsl(var(--hsl-color), calc(var(--brightness) - 20%));
+  --body: rgb(18, 19, 24);
+  --background: rgb(27, 30, 38);
+  --font-color: rgb(238, 238, 238);
+  --background-inputfeld: hsl(var(--hsl-color), calc(var(--brightness) - 45%));
+  --background-variant: hsl(var(--hsl-color), calc(var(--brightness) - 38%));
+  --body-variant: hsl(var(--hsl-color), calc(var(--brightness) - 41%));
+  --background-variant-darker: hsl(var(--hsl-color), calc(var(--brightness) - 45%));
+}

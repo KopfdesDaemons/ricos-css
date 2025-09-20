@@ -1,4 +1,4 @@
-@use "farben";
+@use "colors";
 @use "fonts";
 @use "inputs";
 @use "buttons";
@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Quicksand", sans-serif;
-  color: var(--schrift);
+  color: var(--font-color);
 }
 
 h1 {
@@ -39,8 +39,8 @@ h3 {
   color: rgb(183, 189, 255);
 }
 
-.darkmode .rot,
-.rot {
+.darkmode .red,
+.red {
   color: red;
 }
 
@@ -58,7 +58,7 @@ table {
 
   thead tr {
     text-align: left;
-    background-color: var(--hintergrund-variant);
+    background-color: var(--background-variant);
   }
 
   th {
@@ -76,7 +76,7 @@ table {
     }
 
     tr:hover {
-      background-color: var(--hintergrund-variant);
+      background-color: var(--background-variant);
     }
   }
 }
@@ -91,7 +91,7 @@ section {
   align-items: center;
 }
 
-.sectiondiv {
+.content-spacer {
   box-sizing: border-box;
   width: 100%;
   max-width: 70em;
@@ -102,18 +102,8 @@ section {
   margin: 0 5%;
 }
 
-.borderdiv {
-  border: 1px solid #dadce0;
-  background-color: var(--hintergrund);
-  border-radius: 8px;
-}
-
-.darkmode .borderdiv {
-  border: 1px solid var(--primary-color);
-}
-
 @media only screen and (max-width: 700px) {
-  .sectiondiv {
+  .content-spacer {
     padding: 0.8em;
   }
 
@@ -128,7 +118,7 @@ img {
   max-width: 100%;
 }
 
-.imageZoomBox {
+.image-zoom-box {
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -146,7 +136,7 @@ img {
 
 /*#endregion*/
 
-.scrollContainer {
+.horizontal-scroll-container {
   overflow-x: auto;
   max-width: 100%;
 }

@@ -37,8 +37,8 @@ button,
   @include button;
 }
 
-.darkmode .btnoutlined,
-.btnoutlined {
+.darkmode .btn-outlined,
+.btn-outlined {
   @include button;
 
   & {
@@ -56,14 +56,14 @@ button,
   }
 
   &:disabled {
-    background-color: var(--hintergrund-inputfeld);
+    background-color: var(--background-inputfeld);
     border-color: #bbbbbb;
     color: #bbbbbb;
   }
 }
 
-.darkmode .btntext,
-.btntext {
+.darkmode .btn-text,
+.btn-text {
   @include button;
 
   & {
@@ -81,7 +81,7 @@ button,
   }
 }
 
-.btnicon {
+.btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -90,16 +90,16 @@ button,
   width: 2rem;
   border-radius: 50%;
   background-color: var(--primary-variant-much-brighter);
-  color: var(--schrift);
+  color: var(--font-color);
   box-sizing: border-box;
 
   &:hover {
-    background-color: var(--hintergrund-variant-darker);
+    background-color: var(--background-variant-darker);
     cursor: pointer;
   }
 
   &:disabled {
-    background-color: var(--hintergrund-inputfeld);
+    background-color: var(--background-inputfeld);
     cursor: not-allowed;
   }
 }

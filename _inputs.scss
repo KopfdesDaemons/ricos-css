@@ -1,5 +1,5 @@
 /*#region Inputfeld*/
-.inputfeld {
+.input-container {
   position: relative;
   display: inline-flex;
   font-size: 1rem;
@@ -11,16 +11,16 @@
   overflow: hidden;
 }
 
-.inputfeld input {
+.input-container input {
   font-weight: 500;
   font-size: 1em;
-  color: var(--schrift);
+  color: var(--font-color);
   padding: 1em 0.8em 0.5em;
   outline: none;
   width: 100%;
   border: none;
   box-sizing: border-box;
-  border: 1px solid var(--hintergrund-variant-darker);
+  border: 1px solid var(--background-variant-darker);
 
   &:disabled {
     cursor: not-allowed;
@@ -28,17 +28,17 @@
 }
 
 input:-webkit-autofill {
-  -webkit-text-fill-color: var(--schrift);
+  -webkit-text-fill-color: var(--font-color);
 }
 
-.inputfeld input,
+.input-container input,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   box-shadow:
-    inset 0 0 0 1px var(--hintergrund-inputfeld),
-    inset 0 0 0 100px var(--hintergrund-inputfeld);
+    inset 0 0 0 1px var(--background-inputfeld),
+    inset 0 0 0 100px var(--background-inputfeld);
 }
 
 input::-webkit-inner-spin-button {
@@ -46,7 +46,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.inputfeld .placeholder {
+.input-container .placeholder {
   position: absolute;
   margin: 0 0.5em;
   padding: 0 0.5em;
@@ -61,25 +61,25 @@ input::-webkit-inner-spin-button {
   pointer-events: none;
 }
 
-.inputfeld .invalid:invalid,
+.input-container .invalid:invalid,
 input.ng-dirty.ng-invalid,
 .ng-submitted input.ng-invalid {
   border-bottom: 2px solid red;
 }
 
-.inputfeld input:not(:placeholder-shown) + .placeholder,
-.inputfeld input:focus + .placeholder,
+.input-container input:not(:placeholder-shown) + .placeholder,
+.input-container input:focus + .placeholder,
 input:-webkit-autofill + .placeholder {
   transform: scale(0.8) translateY(-0.1em);
   height: auto;
   color: var(--primary-color);
 }
 
-.inputfeld input:focus {
+.input-container input:focus {
   border-bottom: 2px solid var(--primary-variant-much-brighter);
 }
 
-.inputfeld input:focus + .placeholder {
+.input-container input:focus + .placeholder {
   color: var(--primary-color);
 }
 
@@ -118,12 +118,12 @@ input:-webkit-autofill + .placeholder {
   label {
     padding: 0.5rem;
     width: 100%;
-    background-color: var(--hintergrund-inputfeld);
+    background-color: var(--background-inputfeld);
     border-radius: 6px;
     cursor: pointer;
 
     &:hover {
-      background-color: var(--hintergrund-variant);
+      background-color: var(--background-variant);
     }
   }
 
@@ -172,8 +172,8 @@ input[type="checkbox"] {
 
 /*#region textarea*/
 textarea {
-  background-color: var(--hintergrund-inputfeld);
-  color: var(--schrift);
+  background-color: var(--background-inputfeld);
+  color: var(--font-color);
   padding: 0.5em;
 }
 

@@ -1,11 +1,29 @@
-## color init
+# Ricos-CSS
 
-color configuration:
+## Color configuration
 
-    :root {
-        --hsl-color: 170, 50%;  // primary color
-        --body: rgb(225, 255, 225);
-        --hintergrund: rgb(187, 230, 187); // for UI sections/zones
-    }
+Set the primary color:
 
-Many other colors are calculated from these colors, such as Dark Mode.
+```
+:root {
+    --hsl-color: 170, 50%;
+}
+```
+
+## Colors
+
+Many other colors are calculated from these color, such as Dark Mode.
+
+```
+  --primary-color
+  --primary-variant-darker
+  --primary-variant-brighter
+  --primary-variant-much-brighter
+  --body
+  --background
+  --font-color
+  --background-inputfeld
+  --background-variant
+  --body-variant
+  --background-variant-darker
+```
