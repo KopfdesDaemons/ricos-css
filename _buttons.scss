@@ -43,12 +43,12 @@ button,
 
   & {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--primary-variant-darker);
     border: 0.1rem solid var(--primary-variant-darker);
   }
 
   &:visited {
-    color: var(--primary-color);
+    color: var(--primary-variant-darker);
   }
 
   &:hover {
@@ -89,12 +89,17 @@ button,
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  background-color: var(--hintergrund-variant);
+  background-color: var(--primary-variant-much-brighter);
   color: var(--schrift);
   box-sizing: border-box;
 
   &:hover {
-    background-color: var(--primary-variant-much-brighter);
+    background-color: var(--hintergrund-variant-darker);
     cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: var(--hintergrund-inputfeld);
+    cursor: not-allowed;
   }
 }

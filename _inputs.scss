@@ -20,9 +20,10 @@
   width: 100%;
   border: none;
   box-sizing: border-box;
+  border: 1px solid var(--hintergrund-variant-darker);
 
   &:disabled {
-    filter: brightness(0.5);
+    cursor: not-allowed;
   }
 }
 
