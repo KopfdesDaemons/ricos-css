@@ -102,4 +102,8 @@ button,
     background-color: var(--background-inputfeld);
     cursor: not-allowed;
   }
+
+  &:visited {
+    color: var(--font-color);
+  }
 }
