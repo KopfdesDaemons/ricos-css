@@ -166,6 +166,10 @@ input[type="checkbox"] {
   height: 1.5em;
   width: 1.5em;
   accent-color: var(--primary-color);
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 /*#endregion*/
