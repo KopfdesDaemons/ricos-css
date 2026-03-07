@@ -179,6 +179,10 @@ textarea {
   background-color: var(--background-inputfeld);
   color: var(--font-color);
   padding: 0.5em;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 /*#endregion*/
