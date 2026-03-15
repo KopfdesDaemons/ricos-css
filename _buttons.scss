@@ -14,12 +14,15 @@
   justify-content: center;
   align-items: center;
   font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
 
   &:hover {
     background-color: var(--primary-variant-much-brighter);
     cursor: pointer;
   }
 
+  &[disabled],
   &:disabled {
     background-color: var(--primary-variant-much-brighter);
     cursor: not-allowed;
@@ -78,6 +81,13 @@ button,
 
   &:visited {
     color: var(--primary-variant-darker);
+  }
+
+  &[disabled],
+  &:disabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: #bbbbbb;
   }
 }
 
