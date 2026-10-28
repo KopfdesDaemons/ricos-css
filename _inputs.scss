@@ -179,6 +179,7 @@ textarea {
   background-color: var(--background-inputfeld);
   color: var(--font-color);
   padding: 0.5em;
+  box-sizing: border-box;
 
   &:disabled {
     cursor: not-allowed;
