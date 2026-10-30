@@ -83,6 +83,69 @@ input:-webkit-autofill + .placeholder {
   color: var(--primary-color);
 }
 
+.input-container.has-dropdown {
+  overflow: visible;
+
+  input {
+    padding-right: 2.2em;
+  }
+}
+
+.input-dropdown-toggle {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2rem;
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  color: var(--primary-variant-darker);
+  font-size: 0.85em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-variant-darker);
+  }
+}
+
+.input-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--background-inputfeld);
+  border: 1px solid var(--primary-color);
+  border-top: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-height: 14rem;
+  overflow-y: auto;
+
+  li {
+    padding: 0.65rem 0.8rem;
+    cursor: pointer;
+    color: var(--font-color);
+    font-weight: 500;
+    border-bottom: 1px solid var(--background-variant-darker);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover,
+    &.active {
+      background-color: var(--primary-variant-much-brighter);
+    }
+  }
+}
+
 /*#endregion*/
 /*#region Radiobutton*/
 .radiobuttontogglediv {
